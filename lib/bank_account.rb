@@ -12,8 +12,8 @@ class BankAccount
   def display_balance
     "Your balance is $#{self.balance}."
   end
-  def valid?
-    self.status == "open" && self.balance > 0 ? true : false
+  def valid?(transfer_amount = 0)
+    self.status == "open" && self.balance >= transfer_amount ? true : false
   end
   def close_account
     self.status = "closed"
