@@ -7,4 +7,7 @@ class Transfer
     @status = "pending"
     @amount = amount
   end
+  def valid?
+    self.sender.valid? && self.receiver.valid? ? true : false
+  end
 end
