@@ -8,9 +8,15 @@ class Transfer
     @amount = amount
   end
   def valid?
-    self.sender.valid? && self.receiver.valid? ? true : false
+    self.sender.valid?(self.amount) && self.receiver.valid?(self.amount) ? true : false
   end
   def execute_transaction
-    
+    if self.valid?
+      #do stuff
+
+    else
+      #reject
+
+    end
   end
 end
