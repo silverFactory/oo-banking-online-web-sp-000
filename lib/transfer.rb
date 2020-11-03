@@ -13,5 +13,6 @@ class Transfer
   def execute_transaction
     self.receiver.deposit(self.amount)
     self.sender.balance = self.sender.balance - self.amount
+    self.status = "complete"
   end
 end
