@@ -13,7 +13,7 @@ class BankAccount
     "Your balance is $#{self.balance}."
   end
   def valid?(transfer_amount = 0)
-    self.status == "open" && self.balance >= transfer_amount ? true : false
+    self.status == "open" && self.balance > transfer_amount ? true : false
   end
   def close_account
     self.status = "closed"
