@@ -18,7 +18,7 @@ class Transfer
       self.amount = 0
     else
         @status = "rejected"
-      "Transaction rejected. Please check your account balance."
+    #  "Transaction rejected. Please check your account balance."
     end
   end
 end
