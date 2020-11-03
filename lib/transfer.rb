@@ -11,9 +11,13 @@ class Transfer
     self.sender.valid? && self.receiver.valid? ? true : false
   end
   def execute_transaction
+    if self.valid?
     self.receiver.deposit(self.amount)
     self.sender.balance = self.sender.balance - self.amount
     self.status = "complete"
     self.amount = 0
+  else
+    "Transaction rejected. Please check your account balance."
+  end
   end
 end
